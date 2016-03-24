@@ -1,0 +1,27 @@
+{
+  "name": "twine-backend",
+  "version": "0.1.0",
+  "description": "A backend service for saving and restoring twine resources files",
+  "scripts": {
+    "start": "node index.js",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ut7/twine-backend.git"
+  },
+  "keywords": [
+    "twine",
+    "persistence"
+  ],
+  "author": "/ut7 - https://github.com/ut7",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/ut7/twine-backend/issues"
+  },
+  "homepage": "https://github.com/ut7/twine-backend#readme",
+  "devDependencies": {
+    "mocha": "^2.4.5",
+    "request": "^2.69.0"
+  }
+}
