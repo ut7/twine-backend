@@ -1,8 +1,14 @@
-var http = require("http");
+var fs = require("fs"),
+    http = require("http");
 
-var createServer = function () {
+var createServer = function (fileName) {
   return http.createServer(function (request, response) {
-    response.end();
+    if (request.method == 'POST') {
+      request.pipe(fs.createWriteStream('data/' + fileName));
+      response.end();
+    } else {
+      fs.createReadStream('data/' + fileName).pipe(response);
+    }
   });
 };
 
